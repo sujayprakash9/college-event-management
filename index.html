@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Placement Management System</h1>
+        <p>Student Placement Records</p>
+    </header>
+
+    <div class="container">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+            <input type="text" id="name" placeholder="Student Name" required>
+            <input type="text" id="roll" placeholder="Roll Number" required>
+            <input type="text" id="company" placeholder="Company Name" required>
+
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Selected">Selected</option>
+                <option value="Not Selected">Not Selected</option>
+            </select>
+
+            <button type="submit">Add Student</button>
+        </form>
+
+        <h2>Student Records</h2>
+
+        <input type="text" id="search"
+               placeholder="Search by student name..."
+               oninput="displayStudents()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll No.</th>
+                    <th>Company</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentList"></tbody>
+        </table>
+
+        <p id="count">Total Students: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
